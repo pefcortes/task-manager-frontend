@@ -5,7 +5,7 @@ import { useAlert } from "react-alert";
 import "./TaskItem.scss";
 
 const TaskItem = ({ task, fetchTasks }) => {
-    //const alert = useAlert();
+    // const alert = useAlert();
 
     const handleTaskDeletion = async () => {
         try {
