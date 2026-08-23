@@ -1,0 +1,34 @@
+.alert-container {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.alert-item {
+    pointer-events: auto;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    min-width: 240px;
+    text-align: center;
+}
+
+.alert-item.success {
+    background: #2ecc71;
+}
+
+.alert-item.error {
+    background: #e74c3c;
+}
+
+.alert-item.info {
+    background: #3498db;
+}
