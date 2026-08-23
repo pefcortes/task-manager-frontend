@@ -1540,7 +1540,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.16.3":
+"@babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.7":
   version: 7.29.7
   resolution: "@babel/runtime@npm:7.29.7"
   checksum: 10c0/ca11572f7146b21e0bde6a9ed4bb6a89eafbee5f0944c7eb54d0d8a2dac962c33638a1d611e14faa71dfbb92b4b5f9236232208568a6b7d5c6f3f39ddb91771e
@@ -5121,6 +5121,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"csstype@npm:^3.0.2":
+  version: 3.2.3
+  resolution: "csstype@npm:3.2.3"
+  checksum: 10c0/cd29c51e70fa822f1cecd8641a1445bed7063697469d35633b516e60fe8c1bde04b08f6c5b6022136bb669b64c63d4173af54864510fbb4ee23281801841a3ce
+  languageName: node
+  linkType: hard
+
 "damerau-levenshtein@npm:^1.0.8":
   version: 1.0.8
   resolution: "damerau-levenshtein@npm:1.0.8"
@@ -5434,6 +5441,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dom-helpers@npm:^5.0.1":
+  version: 5.2.1
+  resolution: "dom-helpers@npm:5.2.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.8.7"
+    csstype: "npm:^3.0.2"
+  checksum: 10c0/f735074d66dd759b36b158fa26e9d00c9388ee0e8c9b16af941c38f014a37fc80782de83afefd621681b19ac0501034b4f1c4a3bff5caa1b8667f0212b5e124c
+  languageName: node
+  linkType: hard
+
 "dom-serializer@npm:0":
   version: 0.2.2
   resolution: "dom-serializer@npm:0.2.2"
@@ -5529,6 +5546,13 @@ __metadata:
   version: 10.0.0
   resolution: "dotenv@npm:10.0.0"
   checksum: 10c0/2d8d4ba64bfaff7931402aa5e8cbb8eba0acbc99fe9ae442300199af021079eafa7171ce90e150821a5cb3d74f0057721fbe7ec201a6044b68c8a7615f8c123f
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^17.4.2":
+  version: 17.4.2
+  resolution: "dotenv@npm:17.4.2"
+  checksum: 10c0/164f8e77a646c8446867d5b588d26ea6005c8ea7c5eb41cf926f6113d23f2191355f6e0cfd95ea9bab98394a5b0a3f1e51a8399711b666fe55cc7b0bd745f942
   languageName: node
   linkType: hard
 
@@ -11131,7 +11155,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.8.1":
+"prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -11250,6 +11274,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-alert@npm:^7.0.3":
+  version: 7.0.3
+  resolution: "react-alert@npm:7.0.3"
+  dependencies:
+    prop-types: "npm:^15.7.2"
+    react-transition-group: "npm:^4.4.1"
+  peerDependencies:
+    react: ^16.8.1 || ^17
+    react-dom: ^16.8.1 || ^17
+  checksum: 10c0/9e66266c84204f76fe6ab5e12c5e5d4b7d974c193850094e582f14f008bc8937612f111e99a36b65ee0c496681e060ebd68492e03742dd69305f58d13f1bfca4
+  languageName: node
+  linkType: hard
+
 "react-app-polyfill@npm:^3.0.0":
   version: 3.0.0
   resolution: "react-app-polyfill@npm:3.0.0"
@@ -11311,6 +11348,15 @@ __metadata:
   version: 6.1.0
   resolution: "react-error-overlay@npm:6.1.0"
   checksum: 10c0/2b52308b9e489dfaa25df85c7ed5c200371bc214245161a0833b729f9c6b1a2e591e1d1e07c3d3859ffa19b84a386c219d93df9ba13d819be34c20f40e71a555
+  languageName: node
+  linkType: hard
+
+"react-icons@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "react-icons@npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  checksum: 10c0/cc5ae92e61ef9d8fc83cb3f3ac2710deab9174c5831bdaf2a94b099acfc91074a60d4b3adfd3165dcb9b21799ca6c760b3f4f6596d75198c1ed2ea44240818c8
   languageName: node
   linkType: hard
 
@@ -11406,6 +11452,21 @@ __metadata:
   bin:
     react-scripts: bin/react-scripts.js
   checksum: 10c0/1776e7139261019eb4a2adece8fb997913040c6b4e9170902ffed95c3ff311ded623189bb1582ecddb3a5a15d6afd871fb68dbed72080d50f635e31c4ff5fff5
+  languageName: node
+  linkType: hard
+
+"react-transition-group@npm:^4.4.1":
+  version: 4.4.5
+  resolution: "react-transition-group@npm:4.4.5"
+  dependencies:
+    "@babel/runtime": "npm:^7.5.5"
+    dom-helpers: "npm:^5.0.1"
+    loose-envify: "npm:^1.4.0"
+    prop-types: "npm:^15.6.2"
+  peerDependencies:
+    react: ">=16.6.0"
+    react-dom: ">=16.6.0"
+  checksum: 10c0/2ba754ba748faefa15f87c96dfa700d5525054a0141de8c75763aae6734af0740e77e11261a1e8f4ffc08fd9ab78510122e05c21c2d79066c38bb6861a886c82
   languageName: node
   linkType: hard
 
@@ -12955,10 +13016,13 @@ __metadata:
     "@testing-library/react": "npm:^16.3.2"
     "@testing-library/user-event": "npm:^13.5.0"
     axios: "npm:^1.19.0"
+    dotenv: "npm:^17.4.2"
     eslint-config-react-app: "npm:^7.0.1"
     node-sass: "npm:^9.0.0"
     react: "npm:^19.2.8"
+    react-alert: "npm:^7.0.3"
     react-dom: "npm:^19.2.8"
+    react-icons: "npm:^5.7.0"
     react-scripts: "npm:5.0.1"
     web-vitals: "npm:^2.1.4"
   languageName: unknown
