@@ -3,9 +3,11 @@ import React, { useState, useEffect, useMemo, useCallback } from "react";
 import "./Tasks.scss";
 import TaskItem from "./TaskItem";
 import AddTask from "./AddTask";
+import { useAlert } from "../context/AlertProvider";
 
 const Tasks = () => {
     const [tasks, setTasks] = useState([]);
+    const { error } = useAlert();
 
     const fetchTasks = useCallback(async () => {
         try {
@@ -13,10 +15,10 @@ const Tasks = () => {
                 `${process.env.REACT_APP_API_URL}/tasks`
             );
             setTasks(data);
-        } catch (error) {
-            console.error("Error fetching tasks:", error);
+        } catch (_error) {
+            error("Error fetching tasks:", _error);
         }
-    }, []);
+    }, [error]);
 
     const lastTasks = useMemo(() => {
         return tasks.filter((task) => task.isCompleted === false);
